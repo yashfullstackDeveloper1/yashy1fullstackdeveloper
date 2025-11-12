@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create display box</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 100%;
+            height: 100%;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 40%;
+            height: 80%;
+            background-color: aliceblue;
+            margin-top: 20px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+        .btn{
+            height: 40px;
+            width: 150px;
+            margin-left: 200px;
+            background-color: rgb(8, 248, 8);
+        }
+        .sub-box{
+            width: 400px;
+            height: 200px;
+            background-color: rgb(224, 224, 212)  ;
+            margin-left: 15%;
+            display: none;
+            border-radius: 30px;
+            text-align: center;
+           padding-top: 20px;
+           margin-top: 40px;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Hidden message</h1>
+    <div class="main">
+        <div class="container">
+            <h1 style="text-align:center;">Display Box</h1>
+            <br>
+            <h2 style="text-align: center;">click the Button to Reveal the hidden message</h2   >
+            <button onclick="dispaly()" class="btn">show message</button>
+            <br>
+            <br>
+            <div class="sub-box" id="display">
+                <h3>This is the hidden text that appears after clicking the button ! </h3>
+              <h3>  you can put any content here - text, images, or even forms. </h3>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function dispaly(){
+   document.getElementById("display").style.display= "block";
+    }
+</script>
+
+</html>

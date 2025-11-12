@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM Withdrawal</title>
+  <style>
+    body {
+      background: #46b2d6;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .atm-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 30px;
+      text-align: center;
+      width: 320px;
+    }
+
+    h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .balance-box {
+      background: #f6f8f9;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .balance-box span {
+      display: block;
+      color: #46b2d6;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 48%;
+      background-color: #1780a1;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px 1%;
+    }
+
+   
+
+    .message {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 6px;
+      background-color: #d6f0d1;
+      color: #234d20;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="atm-box">
+    <h2>ATM Withdrawal</h2>
+
+    <div class="balance-box">
+      <p>Current Balance</p>
+      <span id="dispaly">₹10,000</span>
+    </div>
+
+    <input id="input" type="number" placeholder="Enter amount" />
+
+    <div>
+      <button onclick="add()">Add</button>
+      <button onclick="sub()">Withdraw</button>
+    </div>
+
+    <div id="message" class="message">Transaction Successful</div>
+  </div>
+
+  <script>
+      function add() {
+            let x = document.getElementById("input").value;
+            let y = 0;
+            y = y + Number(x);
+            document.getElementById("dispaly").innerHTML = y;
+        }
+        function sub() {
+            let x = document.getElementById("input").value;
+            let y = 10000;
+
+            y = y - x;
+
+
+            document.getElementById("dispaly").innerHTML = y;
+        }
+  </script>
+</body>
+</html>

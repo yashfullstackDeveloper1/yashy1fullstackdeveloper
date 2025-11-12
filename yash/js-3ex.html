@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blub</title>
+    <style>
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+        }
+        .btn{
+            width: 40px;
+            height: 30px;
+        }
+    </style>
+    
+
+    <script>
+       function showoutput(){
+       document.getElementById("ON").style.display = "block"
+       document.getElementById("OFF").style.display = "none"
+       }
+       function off(){
+         document.getElementById("OFF").style.display = "block"
+       document.getElementById("ON").style.display = "none"
+       }
+    </script>
+</head>
+<body>
+    
+    <div class="main"><h1>Bulb on off project</h1>
+     
+           <!--blub-->
+        <img style="display: none;" id="ON" src="https://i.pinimg.com/736x/8b/e0/60/8be0603fa9222908eac38746f7c72c2a.jpg"  height="300PX" alt="">
+        <img style="display: none;" id="OFF" src="https://www.pngitem.com/pimgs/m/4-48590_light-bulb-clipart-png-image-free-download-searchpng.png" height="300PX" alt="">
+        <br>
+         <button class="btn" onclick="showoutput()">on</button>
+        <button class="btn" onclick="off()">off</button>
+    
+</html>
