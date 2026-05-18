@@ -14,7 +14,6 @@ app.use(express.json());
 
 app.get('/fix-mappings', async (req, res) => {
   try {
-    // Delete all existing mappings
     await pool.query('DELETE FROM user_institute_roles');
 
     // ayushn - 1 institute + 1 role (Admin)
